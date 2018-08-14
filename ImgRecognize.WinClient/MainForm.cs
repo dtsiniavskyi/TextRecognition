@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilities;
 
+// TODO: Rename to Text Recognition
 namespace ImgRecognize.WinClient
 {
     public partial class MainForm : Form
