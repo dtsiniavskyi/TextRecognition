@@ -29,18 +29,17 @@ namespace ImgRecognize.WinClient
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var text = U.Recognize(pictureBox1.Image);
-            richTextBox1.Text = text;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
             var result = U.Profile(() => {
                 var text = U.Recognize(pictureBox1.Image);
                 richTextBox1.Text = text;
             });
 
             richTextBox1.Text += ": " + result.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
