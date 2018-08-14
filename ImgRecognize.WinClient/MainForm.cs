@@ -35,7 +35,8 @@ namespace ImgRecognize.WinClient
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            var result = U.Profile(() => { U.Recognize(pictureBox1.Image); });
+            richTextBox1.Text = result.ToString();
         }
     }
 }

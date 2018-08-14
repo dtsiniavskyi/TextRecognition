@@ -1,4 +1,5 @@
 ﻿using IronOcr;
+using System;
 using System.Drawing;
 
 namespace Utilities
@@ -17,6 +18,15 @@ namespace Utilities
         {
             var result = _ocr.Read(image);
             return result.Text;
+        }
+
+        public static TimeSpan Profile(Action action)
+        {
+            var start = DateTime.Now;
+            action();
+            var end = DateTime.Now;
+
+            return end - start;
         }
     }
 }
