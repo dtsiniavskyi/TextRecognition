@@ -25,7 +25,7 @@ namespace Utilities
             var start = DateTime.Now;
             action();
             var end = DateTime.Now;
-
+            
             return end - start;
         }
     }
