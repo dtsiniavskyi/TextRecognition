@@ -32,5 +32,10 @@ namespace ImgRecognize.WinClient
             var text = U.Recognize(pictureBox1.Image);
             richTextBox1.Text = text;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
