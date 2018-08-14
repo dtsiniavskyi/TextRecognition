@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilities;
 
 namespace ImgRecognize.WinClient
 {
@@ -15,6 +16,23 @@ namespace ImgRecognize.WinClient
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog1.FileName;
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var path = textBox1.Text;
+            var text = U.Recognize(path);
+
+            richTextBox1.Text = text;
         }
     }
 }

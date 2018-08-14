@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgRecognize.WinClient", "ImgRecognize.WinClient\ImgRecognize.WinClient.csproj", "{42750D6E-0272-42FF-B710-1F8A6A146B2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{52645F18-7762-4830-BEB5-88D7A833CCC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{42750D6E-0272-42FF-B710-1F8A6A146B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42750D6E-0272-42FF-B710-1F8A6A146B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42750D6E-0272-42FF-B710-1F8A6A146B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52645F18-7762-4830-BEB5-88D7A833CCC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52645F18-7762-4830-BEB5-88D7A833CCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52645F18-7762-4830-BEB5-88D7A833CCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52645F18-7762-4830-BEB5-88D7A833CCC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
