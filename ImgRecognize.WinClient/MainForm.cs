@@ -29,9 +29,7 @@ namespace ImgRecognize.WinClient
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var path = textBox1.Text;
-            var text = U.Recognize(path);
-
+            var text = U.Recognize(pictureBox1.Image);
             richTextBox1.Text = text;
         }
     }

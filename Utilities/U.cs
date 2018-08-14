@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using IronOcr;
+using System.Drawing;
 
 namespace Utilities
 {
     public static class U
     {
+        private static readonly AutoOcr _ocr = new AutoOcr();
+
         public static string Recognize(string imagePath)
         {
-            return imagePath;
+            var result = _ocr.Read(imagePath);
+            return result.Text;
+        }
+
+        public static string Recognize(Image image)
+        {
+            var result = _ocr.Read(image);
+            return result.Text;
         }
     }
 }
