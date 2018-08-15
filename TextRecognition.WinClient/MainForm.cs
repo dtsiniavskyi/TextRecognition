@@ -11,6 +11,8 @@ namespace TextRecognition.WinClient
 {
     public partial class MainForm : Form
     {
+        private static readonly object _lock = new object();
+
         public MainForm()
         {
             InitializeComponent();
@@ -62,15 +64,19 @@ namespace TextRecognition.WinClient
                     var fileName = Path.Combine("Images", expected.Key + ".png");
                     using (var image = Image.FromFile(fileName))
                     {
-                        Invoke((MethodInvoker)delegate () {
-                            //pictureBox1.Image = image;
-                        });
+                        //Invoke((MethodInvoker)delegate ()
+                        //{
+                        //    lock(_lock)
+                        //        pictureBox1.Image = image;
+                        //});
 
                         Color color = Color.Green;
-                        var result = U.Profile(() => {
+                        var result = U.Profile(() =>
+                        {
                             var text = U.Recognize(image);
 
-                            Invoke((MethodInvoker)delegate () {
+                            Invoke((MethodInvoker)delegate ()
+                            {
                                 if (text != expected.Value)
                                     color = Color.Red;
 
@@ -78,7 +84,8 @@ namespace TextRecognition.WinClient
                             });
                         });
 
-                        Invoke((MethodInvoker)delegate () {
+                        Invoke((MethodInvoker)delegate ()
+                        {
                             richTextBox1.AppendText(": " + result.ToString("s's 'fff'ms'") + Environment.NewLine, color);
                         });
                     }
