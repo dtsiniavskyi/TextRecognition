@@ -39,9 +39,9 @@ namespace TextRecognition.WinClient
         {
             var expectedResults = new Dictionary<int, string>()
             {
-                { 1, "" },
+                { 1, "TEST 1" },
                 { 2, "" },
-                { 3, "" },
+                { 3, "TEST 3" },
                 { 4, "" },
                 { 5, "" },
                 { 6, "" },
@@ -60,21 +60,28 @@ namespace TextRecognition.WinClient
                 foreach (var expected in expectedResults)
                 {
                     var fileName = Path.Combine("Images", expected.Key + ".png");
-                    var image = Image.FromFile(fileName);
-
-                    var result = U.Profile(() => {
-                        var text = U.Recognize(image);
-
-                        Invoke((MethodInvoker)delegate() {
-                            richTextBox1.Text += text;
+                    using (var image = Image.FromFile(fileName))
+                    {
+                        Invoke((MethodInvoker)delegate () {
+                            //pictureBox1.Image = image;
                         });
 
-                        
-                    });
+                        Color color = Color.Green;
+                        var result = U.Profile(() => {
+                            var text = U.Recognize(image);
 
-                    Invoke((MethodInvoker)delegate () {
-                        richTextBox1.Text += ": " + result.ToString("s's 'fff'ms'") + Environment.NewLine;
-                    });                    
+                            Invoke((MethodInvoker)delegate () {
+                                if (text != expected.Value)
+                                    color = Color.Red;
+
+                                richTextBox1.AppendText(text, color);
+                            });
+                        });
+
+                        Invoke((MethodInvoker)delegate () {
+                            richTextBox1.AppendText(": " + result.ToString("s's 'fff'ms'") + Environment.NewLine, color);
+                        });
+                    }
                 };
             });
         }
