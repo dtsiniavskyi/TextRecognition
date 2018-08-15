@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{42750D6E-0272-42FF-B710-1F8A6A146B2E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ImgRecognize.WinClient</RootNamespace>
-    <AssemblyName>ImgRecognize.WinClient</AssemblyName>
+    <RootNamespace>TextRecognition.WinClient</RootNamespace>
+    <AssemblyName>TextRecognition.WinClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

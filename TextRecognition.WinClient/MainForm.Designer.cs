@@ -1,4 +1,4 @@
-﻿namespace ImgRecognize.WinClient
+﻿namespace TextRecognition.WinClient
 {
     partial class MainForm
     {

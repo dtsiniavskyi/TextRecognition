@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgRecognize.WinClient", "TextRecognition.WinClient\ImgRecognize.WinClient.csproj", "{42750D6E-0272-42FF-B710-1F8A6A146B2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextRecognition.WinClient", "TextRecognition.WinClient\TextRecognition.WinClient.csproj", "{42750D6E-0272-42FF-B710-1F8A6A146B2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{52645F18-7762-4830-BEB5-88D7A833CCC8}"
 EndProject

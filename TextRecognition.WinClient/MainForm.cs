@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilities;
 
 // TODO: Rename to Text Recognition
-namespace ImgRecognize.WinClient
+namespace TextRecognition.WinClient
 {
     public partial class MainForm : Form
     {
