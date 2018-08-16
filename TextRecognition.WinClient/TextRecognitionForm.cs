@@ -8,11 +8,11 @@ using Utilities;
 
 namespace TextRecognition.WinClient
 {
-    public partial class MainForm : Form
+    public partial class TextRecognitionForm : Form
     {
         private static readonly object _lock = new object();
 
-        public MainForm()
+        public TextRecognitionForm()
         {
             InitializeComponent();
         }

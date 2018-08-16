@@ -1,6 +1,6 @@
 ﻿namespace TextRecognition.WinClient
 {
-    partial class MainForm
+    partial class TextRecognitionForm
     {
         /// <summary>
         /// Required designer variable.
