@@ -63,12 +63,6 @@ namespace TextRecognition.WinClient
                     var fileName = Path.Combine("Images", expected.Key + ".png");
                     using (var image = Image.FromFile(fileName))
                     {
-                        //Invoke((MethodInvoker)delegate ()
-                        //{
-                        //    lock(_lock)
-                        //        pictureBox1.Image = image;
-                        //});
-
                         Color color = Color.Green;
                         var result = U.Profile(() =>
                         {
