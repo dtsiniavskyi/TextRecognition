@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilities;
 
-// TODO: Rename to Text Recognition
 namespace TextRecognition.WinClient
 {
     public partial class MainForm : Form
